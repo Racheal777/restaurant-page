@@ -71,9 +71,9 @@ nav ul li a:hover{
 }
 .text{
     position: absolute;
-    top: 6em;
+    /* top: 6em; */
     color: white;
-    padding: 5em;
+    padding: 6em;
     text-align: left;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
@@ -81,7 +81,7 @@ nav ul li a:hover{
     font-size: 3em;
     font-weight: lighter;
     letter-spacing: 0.5px;
-    top: 8em;
+    /* top: 8em; */
 }
 
 .texts{
@@ -93,12 +93,12 @@ nav ul li a:hover{
 
 }
 header {
-    background-image: url('/images/restaurant.jpg');
+    background-image: url('images/restaurant.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    height: 150vh;
+    min-height: 120vh;
     width: 100%;
     overflow-y: hidden;
 }
@@ -106,8 +106,8 @@ header {
 .content{
    
     display: grid;
-
-    top: 30em;
+/* position: relative; */
+    top: 26em;
     grid-template-columns: 250px 250px 250px 250px; 
     justify-content: center;
     
@@ -119,13 +119,7 @@ header {
     position: relative;
     
 } 
-/* .content {
-    position: absolute;
-    left: 4em;
-    top: 35em;
-    display: flex;
-    margin: auto;
-} */
+
 .card{
     border: 0.5px solid rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -457,7 +451,7 @@ ul{
     border-radius: 2em;
     color: white;
     padding: 1rem;
-    box-shadow: 2px 2px 3px 3px #f0bb0d;;
+    box-shadow: 2px 2px 3px 3px  #f0ad4e;;
     /* width: 40%; */
     margin-top: 2em;
     animation: fadeIn 1.5s;
@@ -501,7 +495,7 @@ ul{
 
 .menu-text{
     text-align: center;
-    background-color: #e8b718;
+    background-color: #f0ad4e;
 }
 
 .drinks{
@@ -510,9 +504,17 @@ ul{
 
 
 
+
 /* media query */
 
-@media screen and (max-width : 600px){
+
+
+
+
+
+
+
+@media screen and  (max-width:600px) {
     
     li a{
         list-style-type: none;
@@ -567,7 +569,7 @@ ul{
     }
     .text{
         position: absolute;
-        top: 17em;
+        top: 16em;
        
         padding: 5em;
         text-align: center;
@@ -576,11 +578,11 @@ ul{
     .text p{
         font-size: 3em;
         
-        top: 16em;
+        /* top: 16em; */
     }
     
     .texts{
-       font-size:3.2em;
+       font-size:3em;
        line-height: 1.2;
        letter-spacing: 0.5px;
       
@@ -589,7 +591,7 @@ ul{
     }
     header {
        
-        height: 230vh;
+        min-height: 242vh;
        
     }
     
@@ -597,16 +599,25 @@ ul{
        
         display: flex;
         flex-direction: column;
-        padding: 3em;
-        top: 35em;
+    grid-row-gap: 10px;  
+        padding: 2em;
+        width: 90%;
+        top: 33em;
         margin: auto;
+        
         justify-content: space-evenly;
         
     } 
     
     .card{
-        margin: 0.5em;
-        width: 100%; 
+        margin: auto;
+        left: 0;
+        /* margin: 0.5em; */
+        width: 50%; 
+    }
+    .container{
+        padding: 20px;
+        
     }
 
     .story{
@@ -618,12 +629,12 @@ ul{
     }
     
     .story p{
-        width: 90%;
+        width: 100%;
         font-size: 18px; 
     }
     .menu{
         
-        min-height: 90vh;
+        min-height: 50vh;
         position: relative; 
         display: block;
     }
@@ -665,12 +676,13 @@ ul{
     
     .feature{
         display: flex;
-        width: 90%;
+        width: 100%;
         flex-direction: column;
         text-align: center;
         justify-content: center;
         align-content: center;
         gap: 5em;
+        /* padding: 3rem 15px; */
       
     }
     
@@ -769,15 +781,37 @@ footer ul{
 }
     
 
-@media screen and (min-width : 768px){
+@media screen and (min-width : 768px) and (max-width: 959px){
     header {
        
-        height: 115vh;
+        min-height: 150vh;
        
     }
     
+    .text{
+        position: absolute;
+        top: 5em;
+       
+        padding: 5em;
+        text-align: center;
+        
+    }
+    .text p{
+        font-size: 3em;
+        
+        top: 8em;
+    }
+    
+    .texts{
+       font-size:3.6em;
+       line-height: 1.2;
+       letter-spacing: 0.5px;
+      
+        
+    
+    }
     .content{
-   
+        top: 22em;
         display: grid;
         grid-template-columns: 250px 250px ;
         grid-column-gap: 18px;
@@ -790,7 +824,7 @@ footer ul{
         margin: auto;
        
         padding: 5px;
-        width: 90%; 
+        width: 80%; 
     }
     
     .story{
@@ -806,7 +840,7 @@ footer ul{
     
     .menu{
         
-        min-height: 40vh;
+        min-height: 50vh;
         position: relative; 
         display: block;
     }
@@ -814,7 +848,9 @@ footer ul{
     .menu-story{
        
        width: 100%;
+       margin: auto;
         margin-top: 5em;
+        text-align: center;
        
     }
     
@@ -828,10 +864,11 @@ footer ul{
     }
     
     #menu-btn {
-        width: 90%;
+        width: 60%;
         padding: 0.6em;
         font-size: 1em;
         border-radius: 7px;
+        
         
     }
 
@@ -841,23 +878,22 @@ footer ul{
         color: white;
         padding: 1rem;
         margin: auto;
-        width: 90%;
+        width: 70%;
         margin-top: 2em;
         margin-bottom: 2em;
       }
     
     
-    .feature{
+      .feature{
+       
         width: 100%;
         
-        padding: 2rem 15px;
       
       
     }
     
     .feature-post{
         width: 35%;
-        
     }
     
     
@@ -876,11 +912,7 @@ footer ul{
     }
     
     .table{
-      
-        background-image: url('images/last.jpg');
-        
-        background-attachment: fixed;
-        min-height: 80vh;
+        min-height: 60vh;
         display: flex;
         justify-content: space-around;
        
@@ -895,8 +927,12 @@ footer ul{
     
     .rtable{
         width: 45%;
-        margin-right: 2em;
-        margin-top: 8em;
+        margin-right: 0;
+        margin-top: 12em;
+        margin-left: 2em;
+        font-size: 1em;
+    font-size: 1em;
+    
         
        
     }
@@ -914,8 +950,536 @@ footer ul{
     
 }
    
-
+@media only screen and (min-width: 992px)  {
+    header {
+       
+        min-height: 95vh;
+       
+    }
     
+    .text{
+        position: absolute;
+        top: 5em;
+       
+        padding: 5em;
+        text-align: center;
+        
+    }
+    .text p{
+        font-size: 3em;
+        
+        top: 8em;
+    }
+    
+    .texts{
+       font-size:3.6em;
+       line-height: 1.2;
+       letter-spacing: 0.5px;
+      
+        
+    
+    }
+    .content{
+        top: 22em;
+        display: grid;
+        grid-template-columns: 250px 250px ;
+        grid-column-gap: 18px;
+    grid-row-gap: 10px;  
+        
+        
+    } 
+    
+    .card{
+        margin: auto;
+       
+        padding: 5px;
+        width: 80%; 
+    }
+    
+    .story{
+        max-width: 100%;
+    }
+    
+    .story p{
+        width: 60%;
+        
+        font-size: 18px; 
+    }
+    
+    
+    .menu{
+        
+        min-height: 50vh;
+        position: relative; 
+        display: block;
+    }
+    
+    .menu-story{
+        
+       width: 100%;
+        margin-left: 0;
+        text-align: center;
+        /* margin: auto; */
+    }
+    
+    
+    .menu-story h2{
+        font-size: 50px;  
+    }
+    
+    .menu-story p{
+        width: 100%;
+    
+    }
+    
+    #menu-btn {
+        width: 60%;
+        padding: 0.6em;
+        font-size: 1em;
+        border-radius: 7px;
+        
+        
+    }
+
+    #container-box{
+       
+        border-radius: 2em;
+        color: white;
+        padding: 1rem;
+        margin: auto;
+        width: 70%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+      }
+    
+    
+      .feature{
+       
+        width: 100%;
+        
+      
+      
+    }
+    
+    .feature-post{
+        width: 35%;
+    }
+    
+    
+    
+    .customers{
+        
+        padding: 8em 3em;
+        margin: 2px 18px;
+       } 
+    
+    .icons{
+        padding: 0.5em;
+        font-size: 4em;
+    
+    
+    }
+    
+    .table{
+        min-height: 50vh;
+        display: flex;
+        justify-content: space-around;
+       
+         
+    }
+    .ltable{
+        margin-top: 2em;
+        width: 50%;
+        
+        
+    }
+    
+    .rtable{
+        width: 45%;
+        margin-right: 0;
+        margin-top: 12em;
+        margin-left: 2em;
+        font-size: 1em;
+    font-size: 1em;
+    
+        
+       
+    }
+    footer ul{
+        font-size: 1em;
+        padding: 0.4em;
+        
+    }
+    .footer-text{
+        font-size: 0.6em;
+        display: flex;  
+    }
+     
+}
+ 
+@media only screen and (min-width: 1200px) {
+    header {
+        background-image: url('images/restaurant.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        min-height: 130vh;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    
+    .content{
+       
+        display: grid;
+    /* position: relative; */
+        top: 26em;
+        grid-template-columns: 250px 250px 250px 250px; 
+        justify-content: center;
+        
+        grid-column-gap: 1px;
+        grid-row-gap: 2px; 
+         margin: auto 0; 
+        padding: 2em ;
+       
+        position: relative;
+        
+    } 
+    
+    .card{
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin: auto;
+        /* margin: 25px; */
+        padding: 5px;
+        width: 95%;
+        
+    }
+
+.container{
+    padding: 30px;
+    
+}
+
+.section-body{
+    background-color: rgb(201, 197, 193);
+    /* height: 70vh; */
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.story{
+    max-width: 95%;
+    padding: 2em;
+    text-align: center;
+    left: 10em; 
+    color: rgb(61, 58, 47);
+    margin: auto;
+
+}
+
+.story h1{
+    font-size: 3em;
+    font-weight: 100;
+    padding: 1em; 
+}
+
+.story p{
+    width: 40%;
+    margin: auto;
+    padding: 1.2em;
+    letter-spacing: 0.5px;
+    line-height: 1.45em;
+    font-size: 16px; 
+}
+.menu{
+    
+    min-height: 80vh;
+    position: relative; 
+    display: flex;
+    text-align: left;
+}
+
+.menu-story{
+    font-family: 'Roboto', sans-serif; 
+   width: 50%;
+    color: white;
+    margin-top: 8em;
+    margin-left: 1em;
+}
+
+.menu-story h2{
+    font-size: 50px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    
+}
+
+
+/* span{
+    font-weight: bolder;
+} */
+
+.menu-story p{
+    padding: 0.3em;
+    margin: 10px;
+    font-size: 20px;
+
+}
+
+#menu-btn {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+   color: white;
+    width: 40%;
+    padding: 23px 32px;
+    margin-bottom: 1.5em;
+    
+    
+}
+
+
+
+.feature{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  
+  
+}
+
+.feature-post{
+    width: 25%;
+    padding-top: 2em 2em;
+}
+.feature-post h1{
+    color: rgb(61, 58, 47);
+    font-size: 1em;
+}
+.feature-post p {
+    color: rgb(61, 58, 47);
+    line-height: 1.5em;
+    font-size: 1em;
+    word-spacing: 0.25em;
+}
+.last{
+    margin-bottom: 4em;
+}
+
+
+.fa-star {
+    color: yellow;
+    font-size: 1.5em;
+    margin-top: 5em;
+    padding-bottom: 1em;
+}
+.review{
+    color: #fff;
+    font-size: 1.5em;
+    padding: 1.6em;
+    /* line-height: 1em; */
+
+}
+
+
+
+
+.customers{
+    display: flex;
+    justify-content: space-between;
+    padding: 8em;
+    margin: 2px 28px;
+   } 
+
+.icons{
+  
+font-size: 3.5em;
+font-family: 'Roboto', sans-serif;
+font-weight: 100;
+text-align: center;
+
+}
+.icons h2{
+    font-size: 50px;
+}
+
+.icons p{
+    font-size: 25px;
+
+}
+.table{
+  
+   
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+   
+     
+}
+.ltable{
+    margin-top: 3em;
+    padding: 1em 1.5em  ;
+    color: #fff;
+    font-size: 2em;
+    width: 45%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: none;
+}
+
+.rtable{
+    width: 45%;
+    margin-right: 6em;
+    margin-top: 8em;
+    margin-left: 5em;
+    margin-bottom: 1.5em;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    line-height: 1.5em;
+    font-size: 1.3em;
+    word-spacing: 0.25em;
+}
+
+.address{
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input {
+    margin: 1em;
+    padding: 1em  0;
+    background-color: transparent;
+    border: none;
+    font-size: 0.5em;
+    width: 100%;
+}
+input ::placeholder{
+    outline: none;
+}
+
+input :focus{
+    outline: none;
+    border: none;
+}
+
+
+.btn-container {
+    margin-top: 3rem;
+  }
+  .button2 {
+   
+    width: 40vw;
+    padding: 23px 32px;
+   
+  }
+
+footer{
+    background-color:#252830;
+    color: #fff;
+    /* height: 50vh; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   width: 100%;
+   font-weight: bold;
+   padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+footer ul{
+    font-size: 2em;
+    padding: 0.3em;
+    
+}
+
+footer ul li:hover{
+    color: rgb(10, 112, 245);
+    
+}
+.footer-text{
+    font-size: 1em;
+    display: flex;
+   
+    
+}
+.t{
+    padding-left: 1.5em;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+#container-box{
+    display: none;
+    margin-bottom: 1.5em;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 2em;
+    color: white;
+    padding: 1rem;
+    box-shadow: 2px 2px 3px 3px  #f0ad4e;;
+    width: 40%;
+    margin-top: 2em;
+    animation: fadeIn 1.5s;
+    animation: fadeOut 1.5s;
+    animation-name: fadeIn;
+  
+  }
+  
+  @keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1}
+  }
+
+
+
+.items{
+   list-style-type: none;
+   display: flex;
+   text-decoration: none;
+   animation: fadeIn 1.5s;
+   
+}
+
+.items a{
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+   
+}
+
+.items li{
+    margin: 0.6em;
+    padding: 0.5em;
+    
+}
+
+.menu-text{
+    text-align: center;
+    background-color: #f0ad4e;
+}
+
+.drinks{
+    padding: 1em;
+}
+   
+  }
     
     
 
